@@ -17,7 +17,7 @@ For this project, I will be making an e-commerce website for videogames. I will 
 
 - [Mobile](https://res.cloudinary.com/stephaniev/image/upload/v1596156379/p2-mobile_responsive_framework_llfqke.png)
 - [Tablet](https://res.cloudinary.com/stephaniev/image/upload/v1596156364/p2-_tablet_responsive_framework_gbavjt.png)
-- [Desktop](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/desktop.png)
+- [Desktop](https://res.cloudinary.com/stephaniev/image/upload/v1596211336/Screen_Shot_2020-07-31_at_12.01.05_PM_w5ijb2.png)
 
 Wireframing Resources:
 
@@ -26,49 +26,25 @@ Wireframing Resources:
 
 ## Time/Priority Matrix 
 
-Include a full list of features that have been [prioritized](https://res.cloudinary.com/doaftkgbv/image/upload/v1583773146/ValueVSComplexity_u2inhx.png) based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
-
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP (examples)
-
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
-
-#### PostMVP 
-
-- Anything else that is not MVP
+ [prioritized](https://res.cloudinary.com/stephaniev/image/upload/v1596220903/FRONTEND_-_TIME_PRIORITY_MATRIX_rdsema.png) 
 
 ## Functional Components
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | 1.5hr | -hr|
-| grid-area | H | 3hr | -hr | -hr|
-| flexbox | H | H | -hr | -hr|
-| buttons | H | 1.5hr| -hr | -hr |
+| Hamburger | H | 1hr | -hr | -hr|
+| grid-area | H | 3hrs | -hr | -hr|
+| flexbox | H | 3hrs | -hr | -hr|
+| buttons | H | 2hrs| -hr | -hr |
 | Total | H | 15.5hrs| -hrs | -hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | M | 2hr | -hr | -hr|
-| Banner | L | 3hr | -hr | -hr|
-| Backend | H | 24hr | -hr | -hr|
-| Frontend | H | 12hr | -hr | -hr|
-| Listeners | H | 4hr | -hr | -hr|
-| on click events | H | 4hr | -hr | -hr|
-| Total | H | 49hrs| -hrs | -hrs |
+| Logos | L | 1hr | -hr | -hr|
+| Design | M | 4hr | -hr | -hr|
+| Total | H | 5hrs| -hrs | -hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
