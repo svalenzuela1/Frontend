@@ -6,6 +6,27 @@ html {
 }
 
 .navigation {
-
     background-color: darkred;
+}
+
+.burger {
+    color: white;
+    font-size: x-large;
+    text-align: center; 
+    
+}
+
+.link {
+    text-align: center;
+    font-size: larger;
+}
+
+/*a = .link of above*/
+a{
+    color:white;
+    text-decoration: none;
+}
+
+.gameHeading{
+    color: purple;
 }
