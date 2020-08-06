@@ -20,25 +20,55 @@ const getGames = async () => {
     const {product, cart} = await response.json()
     console.log(product, cart)
     showGames(product)
+    showCart(cart)
 }
 
 //main app logic
 getGames()
+
+//PUT THIS BACK IN CONTENT IF ALL ELSE FAILS
+//<h3>${game.description}</h3>
+// <img src=${game.imageURL}>
+//</img>/ <h5> ${game.price}</h5>
+
 
 //show image names
 const showGames = (games) => {
     console.log(games)
     games.forEach(game => {
         console.log(game)
-        const $content = $('<div>').html(`
-        <h1>${game.name}</h1>
-        <h3>${game.description}</h3>
-        <img src=${game.imageURL}>
-        <h5> ${game.price}</h6>
-    `)
+        const $gameHeader = $('<div>').html(`
+        <h1>${game.name}</h1>`).addClass('gameHeader')
        // $(content).css("background-color","purple")
-        $('body').append($content)
+        $('body').append($gameHeader)
+        
+        const $gameDescription = $('<div>').html(`
+        <h3>${game.description}</h3>`).addClass('gameDescription')
+        $('body').append($gameDescription)
+
+        const $gameImage = $('<div>').html(`
+        <img src=${game.imageURL}>`).addClass('gameImage')
+        $('body').append($gameImage)
+
+        const $gamePrice = $('<div>').html(`
+        <h5>${game.price}</h5>`).addClass('gamePrice')
+        $('body').append($gamePrice)
+
+        const $addToCart = $('<div>').html(`
+        <button>Add To Cart<button>`).addClass('addToCart')
+        $('body').append($addToCart)
 })}
+
+const showCart = (items) => {
+    console.log(items) 
+    items.forEach(item => {
+        console.log(item)
+
+        const $firstItem = $('<div>').html(`
+        <h1>${item.orderSummary}</h1>`)
+        $('body').append($firstItem)
+    })
+}
 
 //CSS for $content
 //$(content).css("display","flex")

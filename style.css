@@ -27,6 +27,25 @@ a{
     text-decoration: none;
 }
 
-.gameHeading{
-    color: purple;
+.gameHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.gameDescription{
+    display: flex;
+    justify-content: center;
+}
+.gameImage{
+    display: flex;
+    justify-content: center; 
+}
+
+.gamePrice{
+    display: flex;
+    justify-content: center;
+}
+
+.addToCart{
+    text-align: center; 
 }
