@@ -21,7 +21,7 @@ const getGames = async () => {
     const {product, cart} = await response.json()
     console.log(product, cart)
     showGames(product)
-    showCart(cart)
+    showCart(cart[1].product)
 }
 
 
@@ -42,23 +42,23 @@ const showGames = (games) => {
         const $gameHeader = $('<div>').html(`
         <h1>${game.name}</h1>`).addClass('gameHeader')
        // $(content).css("background-color","purple")
-        $('body').append($gameHeader)
+        $('.games').append($gameHeader)
         
         const $gameDescription = $('<div>').html(`
         <h3>${game.description}</h3>`).addClass('gameDescription')
-        $('body').append($gameDescription)
+        $('.games').append($gameDescription)
 
         const $gameImage = $('<div>').html(`
         <img src=${game.imageURL}>`).addClass('gameImage')
-        $('body').append($gameImage)
+        $('.games').append($gameImage)
 
         const $gamePrice = $('<div>').html(`
         <h5>${game.price}</h5>`).addClass('gamePrice')
-        $('body').append($gamePrice)
+        $('.games').append($gamePrice)
 
         const $addToCart = $('<div>')
         .append($('<button>').text('Add To Cart').attr('id', game._id).on('click', addItemToCart).addClass('addToCart'))
-        $('body').append($addToCart)
+        $('.games').append($addToCart)
 })}
 
 const createCart = async () => {
@@ -99,19 +99,31 @@ showCart(response.product)
 
 ///////
 const showCart = (items) => {
-    console.log(items) 
+    console.log(items)
+    $('#requestCart').empty() 
     items.forEach(item => {
         console.log(item)
 
         const $firstItem = $('<div>').html(`
-        <h1>${item}</h1>`)
-        $('body').append($firstItem)
+        <h1>${item.name}</h1>
+        <h1>${item.description}</h1>`)
+        $('#requestCart').append($firstItem)
     })
 }
 
-const catchProduct = async (response) => {
-    const response = await fetch(URL + '/carts')
-}
+
+//TRYING TO TARGET ID 
+
+//const catchProduct = async (response) => {
+  //  const response = await fetch(URL + '/carts')
+//}
+
+
+
+
+
+
+
 //CSS for $content
 //$(content).css("display","flex")
 //$(content).css("text-align","center")
