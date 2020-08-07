@@ -105,8 +105,11 @@ const showCart = (items) => {
         console.log(item)
 
         const $firstItem = $('<div>').html(`
+        <h1> CART </h1>
         <h1>${item.name}</h1>
-        <h1>${item.description}</h1>`)
+        <h2>${item.description}</h2>
+        <img src=${game.imageURL}>
+        <h3>${game.price}</h3>`)
         $('#requestCart').append($firstItem)
     })
 }
