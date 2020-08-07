@@ -96,19 +96,24 @@ showCart(response.product)
 
 
 ///////
+
+
 const showCart = (items) => {
     console.log(items)
     $('#requestCart').empty() 
     items.forEach(item => {
         console.log(item)
            
-        //heading for cart
-        const $itemHeading = $('<h1>').html(`
-        <h1>SHOPPING CART</h1>`).addClass('itemHeading')
-        $('#requestCart').append($itemHeading)
-        $($itemHeading).css("text-align","center")
-        $($itemHeading).css("color","white")
-        $($itemHeading).css("background-color","red")
+       for(let i = 0; i < 1; i++){
+           //heading for cart
+    const $itemHeading = $('<h1>').html(`
+    <h1>Added To Cart</h1>`).addClass('itemHeading')
+    $('#requestCart').append($itemHeading)
+    $($itemHeading).css("text-align","center")
+    $($itemHeading).css("color","azure")
+    //$($itemHeading).css("background-color","red")
+        //return 1
+       }
 
 
         //cart items below
@@ -118,7 +123,7 @@ const showCart = (items) => {
         $($itemName).css("justify-content","center")
 
         const $itemDescription = $('<div>').html(`
-        <h1>${item.description}</h1>`).addClass('itemDescription')
+        <h1><i>${item.description}</i></h1>`).addClass('itemDescription')
         $($itemDescription).css("display","flex")
         $($itemDescription).css("justify-content","center")
 
@@ -138,6 +143,7 @@ const showCart = (items) => {
         $('#requestCart').append($itemPrice)
     })
 }
+
 
 
 //TRYING TO TARGET ID 
