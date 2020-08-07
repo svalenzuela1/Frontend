@@ -4,7 +4,8 @@
 
 
 //const $gameImages = $('<div>').addClass('gameImages')
-const URL = 'https://project2-backend-api.herokuapp.com'
+const URL = 'http://localhost:3000'//'https://project2-backend-api.herokuapp.com'
+
 fetch( URL + '/')
 .then(response => response.json())
 .then(data => {
@@ -22,6 +23,7 @@ const getGames = async () => {
     showGames(product)
     showCart(cart)
 }
+
 
 //main app logic
 getGames()
@@ -54,18 +56,55 @@ const showGames = (games) => {
         <h5>${game.price}</h5>`).addClass('gamePrice')
         $('body').append($gamePrice)
 
-        const $addToCart = $('<div>').html(`
-        <button>Add To Cart<button>`).addClass('addToCart')
+        const $addToCart = $('<div>')
+        .append($('<button>').text('Add To Cart').attr('id', game._id).on('click', addItemToCart).addClass('addToCart'))
         $('body').append($addToCart)
 })}
 
+const createCart = async () => {
+    const response = await fetch (URL + '/carts', {
+        method: "post"
+    }).then(res => res.json()) 
+    console.log(response)
+    $('button.cart').attr('id', response._id)
+    return true 
+}
+
+const addItemToCart = async (event) => {
+
+if(!$('button.cart').attr('id')){
+   await createCart()
+}
+
+
+
+    console.log(event.target.id)
+
+    const body = {
+        productToAdd: event.target.id
+}
+const response = await fetch(URL + '/carts/' +  $('button.cart').attr('id'), {
+    method: "put", 
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+
+}).then(res => res.json())
+
+console.log(response)
+showCart(response.product)
+}
+
+
+///////
 const showCart = (items) => {
     console.log(items) 
     items.forEach(item => {
         console.log(item)
 
         const $firstItem = $('<div>').html(`
-        <h1>${item.orderSummary}</h1>`)
+        <h1>${item}</h1>`)
         $('body').append($firstItem)
     })
 }
