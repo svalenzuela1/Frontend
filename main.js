@@ -109,6 +109,9 @@ const showCart = (items) => {
     })
 }
 
+const catchProduct = async (response) => {
+    const response = await fetch(URL + '/carts')
+}
 //CSS for $content
 //$(content).css("display","flex")
 //$(content).css("text-align","center")
