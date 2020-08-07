@@ -49,3 +49,7 @@ a{
 .addToCart{
    margin-left: 420px; 
 }
+
+.cart{
+    display: none;
+}

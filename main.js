@@ -1,5 +1,3 @@
-
-
 //const {productModel, cartModel} = require("../backend-api/models/schemas.js")
 
 
@@ -105,11 +103,8 @@ const showCart = (items) => {
         console.log(item)
 
         const $firstItem = $('<div>').html(`
-        <h1> CART </h1>
         <h1>${item.name}</h1>
-        <h2>${item.description}</h2>
-        <img src=${game.imageURL}>
-        <h3>${game.price}</h3>`)
+        <h1>${item.description}</h1>`)
         $('#requestCart').append($firstItem)
     })
 }
@@ -153,5 +148,5 @@ const showMenu = (event) => {
 
 $burger.on("click", showMenu)
 //Hamburger menu code ends here
- 
+
 
