@@ -53,3 +53,9 @@ a{
 .cart{
     display: none;
 }
+
+.shoppingCart {
+    display: flex;
+    justify-content: center;
+}
+

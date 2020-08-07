@@ -101,11 +101,41 @@ const showCart = (items) => {
     $('#requestCart').empty() 
     items.forEach(item => {
         console.log(item)
+           
+        //heading for cart
+        const $itemHeading = $('<h1>').html(`
+        <h1>SHOPPING CART</h1>`).addClass('itemHeading')
+        $('#requestCart').append($itemHeading)
+        $($itemHeading).css("text-align","center")
+        $($itemHeading).css("color","white")
+        $($itemHeading).css("background-color","red")
 
-        const $firstItem = $('<div>').html(`
-        <h1>${item.name}</h1>
-        <h1>${item.description}</h1>`)
-        $('#requestCart').append($firstItem)
+
+        //cart items below
+        const $itemName = $('<div>').html(`
+        <h1>${item.name}</h1>`).addClass('itemName')
+        $($itemName).css("display","flex")
+        $($itemName).css("justify-content","center")
+
+        const $itemDescription = $('<div>').html(`
+        <h1>${item.description}</h1>`).addClass('itemDescription')
+        $($itemDescription).css("display","flex")
+        $($itemDescription).css("justify-content","center")
+
+        const $itemImage = $('<div>').html(`
+        <img src=${item.imageURL}>`).addClass('itemImage')
+        $($itemImage).css("display","flex")
+        $($itemImage).css("justify-content","center")
+
+        const $itemPrice = $('<div>').html(`
+        <h3>${item.price}</h3>`).addClass('itemPrice')
+        $($itemPrice).css("display","flex")
+        $($itemPrice).css("justify-content","center")
+        
+        $('#requestCart').append($itemName)
+        $('#requestCart').append($itemDescription)
+        $('#requestCart').append($itemImage)
+        $('#requestCart').append($itemPrice)
     })
 }
 
