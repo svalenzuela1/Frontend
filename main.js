@@ -54,7 +54,7 @@ const showGames = (games) => {
         <h5>${game.price}</h5>`).addClass('gamePrice')
         $('.games').append($gamePrice)
 
-        const $addToCart = $('<div>')
+        const $addToCart = $('<div>').addClass('centerButton')
         .append($('<button>').text('Add To Cart').attr('id', game._id).on('click', addItemToCart).addClass('addToCart'))
         $('.games').append($addToCart)
 })}
@@ -136,6 +136,7 @@ const showCart = (items) => {
         <h3>${item.price}</h3>`).addClass('itemPrice')
         $($itemPrice).css("display","flex")
         $($itemPrice).css("justify-content","center")
+        $($itemPrice).css("font-size","25px")
         
         $('#requestCart').append($itemName)
         $('#requestCart').append($itemDescription)
