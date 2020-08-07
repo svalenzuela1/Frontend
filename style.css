@@ -182,18 +182,19 @@ a{
     
     .navigation {
         background-color: darkred;
+        height: 135px;
     }
     
     .burger {
         color: white;
-        font-size: x-large;
+        font-size: 60px;
         text-align: center; 
         
     }
     
     .link {
         text-align: center;
-        font-size: larger;
+        font-size: 45px;
     }
     
     /*a = .link of above*/
