@@ -4,10 +4,10 @@
 |---|---| ---|
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Timeline `backend` and `frontend`| Complete
-|Day 2| Working RestAPI | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches and Present | Incomplete
+|Day 2| Working RestAPI | Complete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 4| MVP & Bug Fixes | Complete
+|Day 5| Final Touches and Present | Complete
 
 ## Project Description
 
@@ -33,39 +33,44 @@ Wireframing Resources:
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Hamburger | H | 1hr | -hr | -hr|
-| grid-area | H | 3hrs | -hr | -hr|
-| flexbox | H | 3hrs | -hr | -hr|
-| buttons | H | 2hrs| -hr | -hr |
-| Total | H | 15.5hrs| -hrs | -hrs |
+| Hamburger | H | 1hr | 1hr | 1hr|
+| grid-area | H | 3hrs | 0hr | 0hr|
+| flexbox | H | 3hrs | 1hr | 1hr|
+| buttons | H | 2hrs| 1hr | 1hr |
+| Total | H | 15.5hrs| 3hrs | 3hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Logos | L | 1hr | -hr | -hr|
-| Design | M | 4hr | -hr | -hr|
-| Total | H | 5hrs| -hrs | -hrs |
+| Logos | L | 1hr | 1hr | 1hr|
+| Design | M | 5hrs | 5hrs | 5hrs|
+| Total | H | 5hrs| 6hrs | 6hrs |
 
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+const body = {
+        productToAdd: event.target.id
+}
+const response = await fetch(URL + '/carts/' +  $('button.cart').attr('id'), {
+    method: "put", 
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+
+}).then(res => res.json())
+
+
+showCart(response.product)
 }
 ```
 
-## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
 #### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: API is not showing onto main page
+**RESOLUTION**: use of 'product' and 'cart' instead of 'productModel' and 'cartModel'
 
-## Previous Project Worksheet
- - [Readme's](https://github.com/jkeohan/fewd-class-repo/tree/master/final-project-worksheet/project-worksheet-examples)
- - [Best of class readme](https://github.com/jkeohan/fewd-class-repo/blob/master/final-project-worksheet/project-worksheet-examples/portfolio-gracie.md)

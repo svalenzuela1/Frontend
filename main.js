@@ -1,5 +1,5 @@
 
-const URL = 'http://localhost:3000' //'https://project2-backend-api.herokuapp.com'
+const URL = 'https://project2-backend-api.herokuapp.com'
 
 fetch( URL + '/')
 .then(response => response.json())
@@ -11,7 +11,7 @@ fetch( URL + '/')
 
 //functions
 const getGames = async () => {
-    const response = await fetch('http://localhost:3000/')
+    const response = await fetch('https://project2-backend-api.herokuapp.com')
     const {product, cart} = await response.json()
     console.log(product, cart)
     showGames(product)
